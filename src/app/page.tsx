@@ -1,7 +1,26 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
+import { PrimaryButton } from "@/components/buttons";
+import { ERole, signIn, signUp } from "@/services/auth";
 
 export default function Home() {
+
+
+  const onSignUp = () => {
+    signUp('manager@ecomm.com', 'password123', {
+      fullName: 'Manager Field', 
+      email: 'manager@ecomm.com',
+      username: 'manager123',
+      phone: '081234681282',
+      role: ERole.MANAGER
+    })
+  }
+
+  const onSignIn = () => {
+    signIn('manager@ecomm.com', 'adawf')
+  }
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -28,15 +47,9 @@ export default function Home() {
         </div>
       </div>
 
+        <div style={{border: '1px solid black'}} onClick={onSignUp}>Sign UP</div>
+        <div style={{border: '1px solid black'}} onClick={onSignIn}>Sign In</div>
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
       </div>
 
       <div className={styles.grid}>
