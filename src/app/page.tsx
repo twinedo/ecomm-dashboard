@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Button } from "./components/buttons/buttons.styled";
 
 export default function Home() {
   return (
@@ -26,7 +25,6 @@ export default function Home() {
               priority
             />
           </a>
-            <Button>Test</Button>
         </div>
       </div>
 
