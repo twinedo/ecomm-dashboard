@@ -1,16 +1,15 @@
-'use client'
+import { ButtonsContainer, ButtonsContent, Postfix, Prefix, Title } from "./buttons.styled";
+import { TButtons } from "./buttons.type";
 
-import styled from "styled-components";
-
-export const PrimaryButton = styled.button<{ $primary?: boolean; }>`
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.$primary ? "#BF4F74" : "white"};
-  color: ${props => props.$primary ? "white" : "#BF4F74"};
-
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #BF4F74;
-  border-radius: 3px;
-  cursor: pointer;
-`;
+export const Buttons = (props: TButtons) => {
+  const { prefix, postfix, children, title = 'Hit me' } = props;
+  return (
+      <ButtonsContainer {...props}>
+        {prefix && <Prefix>{prefix}</Prefix>}
+        <ButtonsContent>
+          {title || typeof children === 'string' ? <Title>{title}</Title> : children}
+        </ButtonsContent>
+        {postfix && <Postfix>{postfix}</Postfix>}
+      </ButtonsContainer>
+  )
+}

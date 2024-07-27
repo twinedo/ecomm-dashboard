@@ -1,0 +1,3 @@
+export enum EDefaultValues {
+    STRING = ''
+}

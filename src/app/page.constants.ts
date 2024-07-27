@@ -1,0 +1,1 @@
+export const textBranding: string[] = ['E-COMMERCE','DASHBOARD','MANAGEMENT SYSTEM']
