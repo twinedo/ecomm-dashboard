@@ -1,5 +1,5 @@
 'use client'
-import { ERole, signIn, signUp } from "@/services/auth";
+import { signIn, signUp } from "@/services/auth";
 import { ContainerAuth, ContainerAuthLeft, ContainerAuthRight, ContainerHalf, TitleLeft, TitleRight } from "./page.styled";
 import { InputPassword, Inputs } from "@/components/inputs";
 import { useForm } from "react-hook-form";
@@ -15,6 +15,7 @@ import { TLoginField } from "./page.type";
 import FormInputs from "@/components/form-inputs";
 import { EDefaultValues } from "@/utils/utils.enum";
 import { useRouter } from "next/navigation";
+import { TInputField } from "@/components/form-inputs/form-inputs.type";
 
 
 export default function Home() {
@@ -27,17 +28,17 @@ export default function Home() {
     });
   }, []);
   
-  const inputFields = useMemo(() => {
+  const inputFields: TInputField[] = useMemo(() => {
     return [
       {
-          inputType: EInputType.TEXT_FIELD,
+          inputType: EInputType.EMAIL,
           controlName: EAuthFieldName.EMAIL,
           title: "Email",
           placeholder: "john.doe@gmail.com",
           isRequired: true
       },
       {
-          inputType: EInputType.TEXT_FIELD_PASSWORD,
+          inputType: EInputType.PASSWORD,
           controlName: EAuthFieldName.PASSWORD,
           title: "Password",
           placeholder: "******",
@@ -49,7 +50,7 @@ export default function Home() {
   const {
     control: control,
     handleSubmit: handleSubmit,
-    formState: { isValid },
+    formState: { isValid, errors },
     setValue: setValue,
   } = useForm({
     mode: 'all',
@@ -82,11 +83,12 @@ export default function Home() {
       
       
         <ContainerAuthRight $isForm={true} $isVisible={true}>
-        <TitleRight>Welcome, <br />Please Login here</TitleRight>
+        <TitleRight>Welcome, <br />please login here</TitleRight>
         <FormInputs 
           inputFields={inputFields}
           formControl={control}
           setFormControl={setValue}
+          errors={errors}
         />
         <Spacer $height={30} />
         <Buttons title="Login" onClick={handleSubmit(onSubmit)} disabled={!isValid} />

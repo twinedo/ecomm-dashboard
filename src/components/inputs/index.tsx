@@ -3,6 +3,7 @@ import { InputsContainer, InputsContent, InputTitle, Postfix, Prefix } from './i
 import { Column } from '../column';
 import { TInputs } from './inputs.type';
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { Spacer } from '../spacer';
 
 export const Inputs = memo((props: TInputs) => {
   const { prefix, postfix, title, isError } = props;

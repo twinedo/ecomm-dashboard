@@ -4,4 +4,5 @@ export const Column = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    width: 100%
 `

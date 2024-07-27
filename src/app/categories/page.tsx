@@ -1,12 +1,12 @@
 import Sidebars from '@/components/sidebars'
 import React from 'react'
 
-const Dashboard = () => {
+const Categories = () => {
   return (
     <Sidebars>
-        <div>Dashboard</div>
+        <div>Categories</div>
     </Sidebars>
   )
 }
 
-export default Dashboard
+export default Categories

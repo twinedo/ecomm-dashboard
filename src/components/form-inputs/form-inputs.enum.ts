@@ -5,17 +5,34 @@ export enum ETextType {
 }
 
 export enum EInputType {
-  TEXT_FIELD = 'text-field',
-  DROPDOWN = 'dropdown',
+  BUTTON = 'button',
+  CHECKBOX = 'checkbox',
+  COLOR = 'color',
   DATE = 'date',
-  TEXT_FIELD_PASSWORD = 'text-field-password',
-  TEXT_FIELD_PHONE = 'text-field-phone',
-  TEXT_FIELD_OTP = 'text-field-otp',
+  DATETIME_LOCAL = 'datetime-local',
+  EMAIL = 'email',
+  FILE = 'file',
+  HIDDEN = 'hidden',
+  IMAGE = 'image',
+  MONTH = 'month',
+  NUMBER = 'number',
+  PASSWORD = 'password',
+  RADIO = 'radio',
+  RANGE = 'range',
+  RESET = 'reset',
+  SEARCH = 'search',
+  SUBMIT = 'submit',
+  TEL = 'tel',
+  TEXT = 'text',
+  TIME = 'time',
+  UTL = 'url',
+  WEEK = 'week',
+  DROPDOWN = 'dropdown'
 }
 
 export enum EIonicons {
-  EYE_OUTLINE ='eye-outline',
-  EYE_OFF_OUTLINE ='eye-off-outline',
+  EYE_OUTLINE = 'eye-outline',
+  EYE_OFF_OUTLINE = 'eye-off-outline',
 }
 
 export enum ETransformCase {

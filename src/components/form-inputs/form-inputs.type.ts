@@ -1,5 +1,6 @@
-import { Control, UseFormSetValue } from "react-hook-form";
+import { Control, FieldErrors, UseFormSetValue } from "react-hook-form";
 import { EInputType, ETextType, ETransformCase } from "./form-inputs.enum";
+import { InputHTMLAttributes } from "react";
 
 export type DropdownFields = {
     id?: string;
@@ -22,10 +23,11 @@ export type TInputField = {
     formatDate?: string; // date mode
     tooltipDesc?: string;
     transform?: ETransformCase;
-  }
+  } & InputHTMLAttributes<HTMLInputElement>
 
 export type TFormInputs = {
     inputFields: TInputField[];
     formControl: Control<any>;
-    setFormControl?: UseFormSetValue<any>
+    setFormControl?: UseFormSetValue<any>;
+    errors: FieldErrors<any>;
 }
