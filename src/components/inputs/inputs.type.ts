@@ -1,7 +1,7 @@
-import { InputHTMLAttributes, ReactNode } from 'react';
+import { InputHTMLAttributes, ReactElement, ReactNode } from 'react';
 
 export type TInputs = {
-	prefix?: ReactNode;
+	prefix?: ReactNode | ReactElement;
 	postfix?: ReactNode;
 	title?: string;
 	iserror?: boolean;

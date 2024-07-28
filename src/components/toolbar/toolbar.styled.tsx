@@ -11,6 +11,7 @@ export const ToolbarContainer = styled.div`
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 `
 
 export const ToolbarTitle = styled.div`
@@ -35,7 +36,7 @@ export const ToolbarOptionLeft = styled.div`
   padding-bottom: 16.5px;
   background-color: #ffffff;
   border-radius: 1rem;
-  border: 1px solid #f4f4f5;
+  /* border: 1px solid #f4f4f5; */
   display: flex;
   justify-content: center;
   align-items: center;

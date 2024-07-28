@@ -3,18 +3,20 @@ import Link from 'next/link';
 
 export const SidebarContainer = styled.div`
 	display: flex;
-	background-color: #fafafa; /* equivalent to bg-neutral-50 */
+	background-color: #FFFFFF;
 `;
 
 export const Sidebar = styled.div<{ collapsed: boolean }>`
 	height: 100vh;
-	background-color: white;
+	background-color: #FAFAFA;
 	padding-top: 24px;
 	border-right: 1px solid #e5e7eb; /* equivalent to border-zinc-100 */
 	display: flex;
 	flex-direction: column;
 	transition: all 0.3s;
 	width: ${({ collapsed }) => (collapsed ? '55px' : '250px')};
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	
 `;
 
 export const ToggleButton = styled.div`
@@ -83,13 +85,13 @@ export const ContentContainer = styled.div<{ collapsed: boolean }>`
 	flex-grow: 1;
 	width: ${({ collapsed }) => (collapsed ? '100%' : 'calc(100% - 250px)')};
 	height: 100vh;
-	background-color: #fafafa; /* equivalent to bg-neutral-50 */
+	background-color: white; /* equivalent to bg-neutral-50 */
 	/* padding: 20px; equivalent to p-[20px] */
 `;
 
 export const ContainerAuthLeft = styled.div`
 	display: flex;
-	background-color: #acd1af; /* equivalent to bg-neutral-50 */
+	background-color: #acd1af;
 `;
 
 export const MainContainer = styled.div`
